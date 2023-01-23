@@ -1,0 +1,70 @@
+.navbar {
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+  }
+
+  
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+        #f8b526 0%,
+        #f51111 29%,
+        #0f0f0f 67%,
+        #fd4726 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size:30px;
+    font-weight: 900;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  .sudiv {
+    display: flex;
+    justify-content: right;
+  }
+
+  .tog {
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+  
+  .togg {
+    margin: 20px;
+  }
+  .linku {
+    text-decoration: none;
+    color: black;
+  }
+  .linku:hover{
+ background-color: #f8b526;
+ 
+  }
+  .burgrr{
+    height: 50px;
+    margin-top: -10px;
+    margin-left: -9px;
+    padding: 5px;
+  }
+  .linkss {
+    padding: 20px;
+    text-decoration: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin: 5px;
+  }
