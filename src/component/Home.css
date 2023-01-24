@@ -1,15 +1,13 @@
 .search-box {
     position: absolute;
-    top: 50%;
-    margin-top: -302px;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: gainsboro;
     height: 40px;
-    border-radius: 40px;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    
   }
   .search-box:hover > .search-txt {
     width: 240px;
@@ -49,10 +47,9 @@
     font-weight: bold;
   }
   .box{
-    margin-top: 20%;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     padding: 5%;
-   
+    margin-top: 90px; 
   }
   .imagess{
     height: 240px;
@@ -65,12 +62,7 @@
   .boxdiv{
     text-align: center;
   }
-  .cercle{
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    background-color: orange;
-  }
+ 
   .imgcer{
     display: flex;
   }
@@ -80,29 +72,7 @@
     align-items: center;
     height: 25vh;
   }
-  .butonboo{
-  
-  display: inline-block;
-  outline: 0;
-  border:0;
-  cursor: pointer;
-  text-decoration: none;
-  position: relative;
-  color: #000;
-  background: orange;
-  line-height: 30px;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 700;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  transition: all 0.2s;}
-  
-  
-  .butonboo:hover{
-      box-shadow: orange -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
-      transform: scale(1.01);
-      background-color: white;
-  }
+ 
   .h2title{
   margin:5%; 
   }
@@ -110,4 +80,45 @@
     color:gray;
     font-size: 20px;
   }
+
+  button {
+    padding: 0.8em 1.8em;
+    border: black,2px solid;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: black;
+    font-weight: 700;
+   }
+   
+   button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: orange;
+    transition: .5s ease;
+   
+    display: block;
+    z-index: -1;
+    margin-top: 20px;
+   }
+   
+   button:hover::before {
+    width: 105%;
+   }
+   
+   button:hover {
+    color: #111;
+   }
+   
   

@@ -24,7 +24,7 @@
     animation: textclip 2s linear infinite;
     display: inline-block;
     font-size:30px;
-    font-weight: 900;
+    font-weight: 700;
   }
   
   @keyframes textclip {
@@ -67,4 +67,7 @@
     text-decoration: none;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     margin: 5px;
-  }
+
+}
+
+

@@ -1,0 +1,84 @@
+.app{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    outline: none;
+    margin: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  
+  
+
+  
+
+  
+  .input--style-5 {
+    background: #e5e5e5;
+    line-height: 50px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .input-group-desc {
+    position: relative;
+  }
+  
+  @media (max-width: 767px) {
+    .input-group-desc {
+      margin-bottom: 40px;
+    }
+  }
+  
+  .input-group {
+    position: relative;
+    margin: 0;
+  }
+  
+  .label {
+    color: #555;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  
+  .label--block {
+    width: 100%;
+  }
+  
+  .label--desc {
+    position: absolute;
+    text-transform: capitalize;
+    display: block;
+    color: #999;
+    font-size: 14px;
+    margin: 0;
+    margin-top: 7px;
+    left: 0;
+  }
+  .labe{
+    text-align: center;
+  }
+
+  ::placeholder {
+    color: black;
+    opacity: 1; 
+  }
+  
+.buttp{
+  text-align: center;
+  background-color: rgb(102, 168, 243);
+ padding: 10px;
+}

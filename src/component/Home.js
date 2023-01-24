@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <>
-            <div>
+          <div>
                 <div class="search-box">
                     <input type="text" name="name" class="search-txt" placeholder="Search" />
                     <a class="search-btn" href="#">
@@ -28,7 +28,7 @@ const Home = () => {
                         <div className='boxdiv'>
                             <h2 className='h2title'>Car Cleaning & Dusting</h2>
                             <p className='pdescri'>You will get house cleaning services according to you with low cost</p>
-                            <button className='butonboo'>CHECK NOW</button>
+                            <button >CHECK NOW</button>
                         </div>
                     </div>
                 </div>
