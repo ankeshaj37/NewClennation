@@ -1,17 +1,28 @@
 .search-box {
     position: absolute;
-    top: 15%;
     left: 50%;
+    width: auto;
     transform: translate(-50%, -50%);
     background: gainsboro;
     height: 40px;
     padding: 10px;
     display: flex;
-    
+    margin-top: 10px;
+
+  }
+  @media screen and (min-width: 480px) {
+    .search-box {
+      position: absolute;
+  margin-left: 50px;
+      transform: translate(-50%, -50%);
+      background: gainsboro;
+      height: 40px;
+      display: flex;
+    }
   }
   .search-box:hover > .search-txt {
     width: 240px;
-    padding: 0 6px;
+  
   }
   .search-box:hover > .search-btn {
     background: orange;
@@ -31,6 +42,7 @@
     cursor: pointer;
     text-decoration: none;
   }
+ 
   .search-btn > i {
     font-size: 20px;
   }
@@ -47,42 +59,51 @@
     font-weight: bold;
   }
   .box{
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-    padding: 5%;
-    margin-top: 90px; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    height: auto; 
+    padding: 3%;
+    width: auto;
+    margin: 10px;
+  }
+  .aa{
+    margin: 50px;
   }
   .imagess{
     height: 240px;
     width: 240px;
     border-radius: 50%;
-    margin-top: 5px;
-    margin-left: 6px;
+    padding: 20px;
+    position: absolute;
   }
-  
-  .boxdiv{
-    text-align: center;
-  }
- 
   .imgcer{
     display: flex;
+    justify-content: center;
   }
+  .boxdiv{
+    text-align: center;
+    height: auto;
+    margin-bottom: 10%;
+  }
+ 
   .taxtdiv{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25vh;
+    height:auto;
   }
  
   .h2title{
-  margin:5%; 
+  margin-bottom:30px;
+  margin-top: 5%;
+  color: orange;
   }
   .pdescri{
     color:gray;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   button {
-    padding: 0.8em 1.8em;
+   padding: 5px;
     border: black,2px solid;
     position: relative;
     overflow: hidden;
@@ -102,15 +123,13 @@
     width: 0;
     height: 300%;
     position: absolute;
-    top: 50%;
+    top: 51%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
     background: orange;
     transition: .5s ease;
-   
-    display: block;
     z-index: -1;
-    margin-top: 20px;
+   
    }
    
    button:hover::before {
@@ -120,5 +139,11 @@
    button:hover {
     color: #111;
    }
-   
+   .ww {
+    height: 10;
+    position: relative;
+    margin-left:-2px;
+    margin-top:15px;
+    padding: 100px;
+  }
   

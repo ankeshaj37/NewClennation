@@ -1,0 +1,29 @@
+.tess{
+  
+    height: auto;
+   text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+.imge{
+   
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.imasss{
+    height: 200px;
+    width: 200px;
+}
+.totalerow{
+    margin: 5%;
+    height: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.buton{
+    justify-content: right;
+    text-align: right;
+    padding:25px;
+    
+}

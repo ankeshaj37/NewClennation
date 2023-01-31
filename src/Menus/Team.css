@@ -5,24 +5,17 @@ justify-content: center;
 .teamimg{
     border-radius: 50%;
 }
-
-
 .teamrow{
    margin-top:25%;
    justify-content: center;
    display: flex;
 }
-
 .ss{
-    color: white;
-  
+    color: orange;
+    margin-top: 15px;
 }
-
-
-
-
 .teams {
-    background: gray;
+    background: black;
     width: var(--card-width);
     height: 300px;
     padding: 5px;
@@ -33,14 +26,10 @@ justify-content: center;
     align-items: center;
     text-align: center;
     display: flex;
-   
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
     
   }
-  
- 
-  
   .teams::before {
     content: "";
     width: 104%;
@@ -48,7 +37,7 @@ justify-content: center;
     border-radius: 8px;
     background-image: linear-gradient(
       var(--rotate)
-      , #5ddcff, #ffa500 43%, #ffa500);
+      , yellow, red 43%, #ffa500);
       position: absolute;
       z-index: -1;
       top: -1%;
@@ -72,7 +61,7 @@ justify-content: center;
     filter: blur(calc(var(--card-height) / 6));
     background-image: linear-gradient(
       var(--rotate)
-      , #5ddcff, #3c67e3 43%, #ffa500);
+      , yellow, red 43%, #ffa500);
       opacity: 1;
     transition: opacity .5s;
     animation: spin 2.5s linear infinite;

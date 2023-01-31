@@ -6,14 +6,14 @@
 }
 .form-body{
     background-color: gainsboro;
-    padding: 10%;
+    padding: 9%;
 }
 .maps{
     background-color: gainsboro;
-   padding-bottom: 75px;
+  
    margin-bottom: 5%;
    display: flex;
    justify-content: center;
-   height: 40vh;
+   height: 43vh;
    align-items: center;
 }

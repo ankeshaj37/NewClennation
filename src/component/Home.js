@@ -1,40 +1,54 @@
-import React, { useState } from 'react'
+
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import { db } from './firebase';
 import './Home.css';
 
 
 const Home = () => {
 
+    const [datas,setdatas]= useState([])
+    const [search,setsearch]= useState('')
 
+  useEffect (()=>{
+    db.collection('services').onSnapshot(tap=>(
+        setdatas(tap.docs.map((e)=>({uid:e.id,data:e.data()})))
+    ))
+  },[])
     return (
         <>
-          <div>
-                <div class="search-box">
-                    <input type="text" name="name" class="search-txt" placeholder="Search" />
-                    <a class="search-btn" href="#">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </a>
-
+            <div className=' container-flued'>
+                <div className='aa row'>
+                    <div class="search-box">
+                        <input type="text" name="name" class="search-txt" placeholder="Search" value={search} onChange={(e)=>setsearch(e.target.value)}/>
+                        <a class="search-btn" href="#">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
-
-            </div>
-            <div className='box container'>
-                <div className='row'>
+                
+                <div className='container'>
+                {datas.filter((e) => (e.data.title.toLowerCase().indexOf(search.toLowerCase()) !== -1) )
+                  
+                  .map((e)=>(
+                    <>
+                            <div className=' box row'>
                     <div className='imgcer col-lg-4'>
-                        <div className='cercle'>
-                            <img className='imagess' src='https://res.cloudinary.com/clennation/image/upload/v1658506919/kdq_dymdzy.jpg' />
-                        </div>
+                        <img className='imagess' src={e.data.image} />
+                        <div className=" ww spinner-border text-warning" role="status"></div>
                     </div>
                     <div className=' taxtdiv col-lg-8'>
                         <div className='boxdiv'>
-                            <h2 className='h2title'>Car Cleaning & Dusting</h2>
-                            <p className='pdescri'>You will get house cleaning services according to you with low cost</p>
-                            <button >CHECK NOW</button>
+                            <h2 className='h2title'>{e.data.title}</h2>
+                            <p className='pdescri'>{e.data.infor}</p>
+                           <Link to={`/:id/${e.uid}`}> <button >CHECK NOW</button></Link>
                         </div>
                     </div>
                 </div>
+                    </>
+                  ))}                    
+                </div>
             </div>
-
-
 
         </>
     )

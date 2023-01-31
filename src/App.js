@@ -1,6 +1,7 @@
-import { Sports } from '@mui/icons-material';
+
+
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes,useParams } from 'react-router-dom';
 import './App.css';
 import CarCleaning from './Category/CarCleaning';
 import CategoryHome from './Category/CategoryHome';
@@ -17,24 +18,37 @@ import Others from './Category/Others';
 import Programming from './Category/Programming';
 import RealEstate from './Category/RealEstate';
 import Shifting from './Category/Shifting';
+import Sports from './Category/Sports';
 import Wedding from './Category/Wedding';
 import Footer from './component/Footer';
+import Form from './component/Form';
 import Home from './component/Home'
+import Login from './component/Login';
 import Navbar from './component/Navbar';
+import ShowData from './component/ShowData';
+import AddServices from './dashboard/AddServices';
+import Dashboard from './dashboard/Dashboard';
+import Edit from './dashboard/Edit';
+import Leads from './dashboard/Leads';
+import TotaleServises from './dashboard/TotaleServises';
 import About from './Menus/About';
 import Contactus from './Menus/Contactus';
 import Offer from './Menus/Offer';
-import Team from './Menus/Team';
+import Team from './Menus/Team'
+
+
 
 const App = () => {
+
+  let { userId } = useParams();
+
+
   return (
     <div className='app'>
       <BrowserRouter>
         <Navbar />
         <Routes>  <Route path="/" element={<Home />} />
           <Route path="/Category" element={<CategoryHome />} />
-
-
           <Route path="/services/1" element={<HouseCleaning />} />
           <Route path="/services/2" element={<CarCleaning />} />
           <Route path="/services/3" element={<ChandelierClean />} />
@@ -51,14 +65,21 @@ const App = () => {
           <Route path="/services/14" element={<Programming />} />
           <Route path="/services/15" element={<Digital />} />
           <Route path="/services/16" element={<Others />} />
-
           <Route path="/team" element={<Team />} />
           <Route path="/about" element={<About />} />
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/offer" element={<Offer />} />
-        
-        </Routes>
-        
+          <Route path="/login" element={<Login />} />
+          <Route path="/dash" element={<Dashboard />} />
+          <Route path="/add" element={<AddServices />} />
+          <Route path="/totle" element={<TotaleServises />} />
+          <Route path="/leads" element={<Leads />} />
+          <Route path="form" element={<Form />} />
+          <Route path="edit" element={<Edit />} />
+
+          <Route path="/:id" element={<ShowData />} />
+      
+        </Routes>  
       </BrowserRouter>
       <Footer/> 
     </div>

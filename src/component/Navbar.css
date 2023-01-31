@@ -59,8 +59,9 @@
   .burgrr{
     height: 50px;
     margin-top: -10px;
-    margin-left: -9px;
+    margin-left: -2px;
     padding: 5px;
+    border: none;
   }
   .linkss {
     padding: 20px;
