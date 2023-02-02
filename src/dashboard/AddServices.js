@@ -1,8 +1,6 @@
 
 import React, { useState } from 'react'
 import { db } from '../component/firebase'
-
-
 import './AddServices.css'
 
 const AddServices = () => {
@@ -17,10 +15,6 @@ const AddServices = () => {
     console.log(title);
 
     const post =()=>{
-    
-         db.collection('services').add({title:title,infor:infor,image:image,Price:Price,Mobile:Mobile,address:address})
-       
-        alert('succsefull')
         db.collection('cetegory').doc('MA8P3Re6z9Qy4V1silHS').collection(select).add({title:title,infor:infor,image:image,Price:Price,Mobile:Mobile,address:address})
         settitle('')
         setinfor('')

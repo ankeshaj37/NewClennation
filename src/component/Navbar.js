@@ -1,11 +1,27 @@
 
-import React from 'react'
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
+import { auth } from './firebase';
 import './Navbar.css';
 
 
 
 const Navbar = () => {
+  const [first, setfirst] = useState('')
+
+  onAuthStateChanged(auth, (user) => {
+    setfirst(user)
+  });
+
+  const singout =()=>{
+    signOut(auth).then(() => {
+     
+    }).catch(() => {
+      
+    });
+    
+  }
 
 
   return (
@@ -74,10 +90,15 @@ const Navbar = () => {
                   SELL SERVISES
                   </li>
                   </Link>
-                  <Link className='linku' to='/dash'> <li data-bs-dismiss="offcanvas" className=" linkss nav-item">
-                 Dash
+                  {first? <Link className='linku' to='/dash'> <li data-bs-dismiss="offcanvas" className=" linkss nav-item">
+                 Dashboard
                   </li>
-                  </Link>
+                  </Link>:''}
+
+                 {first? <Link className='linku' to='/' onClick={singout}> <li data-bs-dismiss="offcanvas" className=" linkss nav-item">
+                SINGOUT
+                  </li>
+                  </Link>:''}
                  
                 </ul>
               </div>

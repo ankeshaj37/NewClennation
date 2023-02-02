@@ -29,20 +29,7 @@ const Fitness = () => {
              </TabList>
 
              <TabPanel>
-               <h2>chetan</h2>
-             </TabPanel>
-             <TabPanel>
-               <h2>heth</h2>
-             </TabPanel>
-             <TabPanel>
-               <h2>rohit</h2>
-             </TabPanel>
-             <TabPanel>
-               <h2>shubham</h2>
-             </TabPanel>
-           </Tabs>
-
-           <div className='container'>
+             <div className='container'>
            {first.map((e)=>(
        <>
 <div className=' eee row'>
@@ -50,7 +37,6 @@ const Fitness = () => {
 <div className='imgedivvv'>
   <img className='imagesss' src={e.image}></img>
 </div>
-
   </div>
    <div className='col-lg-6'>
 <div><h3>{e.title}</h3></div>
@@ -64,7 +50,7 @@ const Fitness = () => {
 
 <div className='locdiv'><div className='shsh'><img className='loca' src='https://img.icons8.com/ios-filled/512/place-marker.png'/></div><h6>{e.address}</h6></div>
 <div className='buttdiv'>
-<button className='buttdiv' ><Link className='buttdiv' to={e.mobile}>Call</Link></button>
+<button className="buttdiv"><a className="buttdiv" href={"tel:" + e.mobile}>Call Now</a></button>
   <button className='buttdiv' onClick={book}>Book Now</button>
 </div>
   </div>
@@ -73,6 +59,19 @@ const Fitness = () => {
 </>
      ))}
      </div>
+             </TabPanel>
+             <TabPanel>
+               <h2>heth</h2>
+             </TabPanel>
+             <TabPanel>
+               <h2>rohit</h2>
+             </TabPanel>
+             <TabPanel>
+               <h2>shubham</h2>
+             </TabPanel>
+           </Tabs>
+
+  
    </div>
   )}
 

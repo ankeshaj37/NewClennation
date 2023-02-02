@@ -2,6 +2,65 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.sdss{
+  width: 21%;
+  margin-right: 9px;
+  margin-top: 10px;
+ 
+}
+.sdsss{
+  width: 21%;
+  margin-right: 13px;
+  margin-top: 10px;
+}
+
+.what{
+  text-align: right;
+  position: absolute;
+ margin-top: 380px;
+  position: fixed;
+  z-index: 1;
+ background: none;
+ 
+}
+@media screen and (min-width: 480px) {
+  .what{
+    text-align: right;
+    position: absolute;
+   margin-top: 650px;
+   margin-left: 1300px;
+    position: fixed;
+    z-index: 1;
+    
+  }
+  .sdss{
+    width:15%;
+    margin-right: 9px;
+    margin-top: 10px;
+   
+  }
+  .sdsss{
+    width: 15%;
+    margin-right: 14px;
+    margin-top: 10px;
+  }
+}
+
+.logindiv{
+  display: flex;
+  justify-content: center;
+}
+.loginbtn{
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  padding: 10px;
+  text-decoration: none;
+}
+.loginbtn:hover{
+background-color: orange;
 }
 
 input {

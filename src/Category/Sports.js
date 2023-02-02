@@ -28,20 +28,7 @@ const Sports = () => {
                <Tab>Title 4</Tab>
              </TabList>
              <TabPanel>
-               <h2>chetan</h2>
-             </TabPanel>
-             <TabPanel>
-               <h2>heth</h2>
-             </TabPanel>
-             <TabPanel>
-               <h2>rohit</h2>
-             </TabPanel>
-             <TabPanel>
-               <h2>shubham</h2>
-             </TabPanel>
-           </Tabs>
-
-           <div className='container'>
+             <div className='container'>
            {first.map((e)=>(
        <>
 <div className=' eee row'>
@@ -63,7 +50,7 @@ const Sports = () => {
 
 <div className='locdiv'><div className='shsh'><img className='loca' src='https://img.icons8.com/ios-filled/512/place-marker.png'/></div><h6>{e.address}</h6></div>
 <div className='buttdiv'>
-<button className='buttdiv' ><Link className='buttdiv' to={e.mobile}>Call</Link></button>
+<button className="buttdiv"><a className="buttdiv" href={"tel:" + e.mobile}>Call Now</a></button>
   <button className='buttdiv' onClick={book}>Book Now</button>
 </div>
   </div>
@@ -72,6 +59,19 @@ const Sports = () => {
 </>
      ))}
      </div>
+             </TabPanel>
+             <TabPanel>
+               <h2>heth</h2>
+             </TabPanel>
+             <TabPanel>
+               <h2>rohit</h2>
+             </TabPanel>
+             <TabPanel>
+               <h2>shubham</h2>
+             </TabPanel>
+           </Tabs>
+
+       
    </div>
   )}
 

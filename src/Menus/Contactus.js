@@ -1,53 +1,77 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import { db } from '../component/firebase'
 import './Contactus.css'
 
 const Contactus = () => {
+    const [first, setfirst] = useState([])
+    const [name, setname] = useState('')
+    const [numb, setnumb] = useState('')
+    const [remark, setremark] = useState('')
+  
 
+    useEffect(() => {
+   db.collection('contactus').onSnapshot(tap=>(
+        setfirst(tap.docs.map((e)=>(e.data())))
+       
+    ))
+  
+    }, [])
 
+    const postt =()=>{
+        db.collection('conatctform').add({name:name,numb:numb,remark:remark})
+        setname('')
+        setnumb('')
+        setremark('')
+    }
+    
     return (
-
         <>
-            <div className=' contavv container'>
+        {first.map((e)=>(
+            <>
+             <div className=' contavv container'>
                 <div className='row'>
                     <div className='col-lg-6'>
                         <div className='maps' >
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15077.701644870147!2d72.79994946882877!3d19.132846999913813!
-   2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b60aed991b75%3A0xf021e3f7da753ad4!2sShiv%20Galli%2C%20Versova%2C%20Andher
-   i%20West%2C%20Mumbai%2C%20Maharashtra%20400061!5e0!3m2!1sen!2sin!4v1674543481164!5m2!1sen!2sin" width="300" height="250"
+                                src={e.maplink} width="300" height="250"
                                 loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
                         
                     </div>
-                    <div className='col-lg-6'>
+              
+                         <div className='col-lg-6'>
                         <div className="form-body">
                         <div className="form-row">
                                     <div className="input-group">
-                                        <input className="input--style-5" placeholder="Name" type="text" name="company" />
+                                        <input className="input--style-5" placeholder="Name" type="text" name="company" value={name} onChange={(e)=>setname(e.target.value)} />
                                         <div className='labe'>
                                         </div>
                                     </div>
                                 </div><br/>
                                 <div className="form-row">
                                     <div className="input-group">
-                                        <input className="input--style-5" placeholder="Phone No " type="text" name="company" />
+                                        <input className="input--style-5" placeholder="Phone No " type="text" name="company" value={numb} onChange={(e)=>setnumb(e.target.value)} />
                                         <div className='labe'>
                                         </div>
                                     </div>
                                 </div><br/>
                                 <div className="form-row">
                                     <div className="input-group">
-                                        <input className="input--style-5" placeholder="Remark" type="text" name="company" />
+                                        <input className="input--style-5" placeholder="Remark" type="text" name="company"  value={remark} onChange={(e)=>setremark(e.target.value)} />
                                         <div className='labe'>
                                         </div>
                                     </div>
                                 </div><br/>
-                                <button>Post</button>
+                                <button onClick={postt}>Post</button>
                         </div>
                     </div>
+                    
                 </div>
             </div>
+            </>
+        ))}
+           
         </>
 
     )

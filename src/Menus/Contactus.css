@@ -14,6 +14,10 @@
    margin-bottom: 5%;
    display: flex;
    justify-content: center;
-   height: 43vh;
+   height: 39vh;
+   width: 90%;
    align-items: center;
+}
+.input--style-5{
+    background-color: white;
 }

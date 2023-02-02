@@ -9,3 +9,10 @@
   justify-content: center;
   margin-top: 7%;
 }
+.sscenter{
+  text-align: center;
+  background-color: orange;
+  padding: 10px;
+ text-decoration: none;
+ color: black;
+}

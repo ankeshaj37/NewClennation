@@ -1,10 +1,51 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import './Login.css'
+import {  createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth, db } from './firebase';
+import { Link, useNavigate } from 'react-router-dom';
+import { Alert } from '@mui/material';
+
 const Login = () => {
 
-    
+
+  const navigate = useNavigate()
+
+  const [loginemail, setloginemail] = useState('')
+  const [loginpassword, setloginpassword] = useState('')
+
+  const [email, setemail] = useState('')
+  const [password, setpassword] = useState('')
+  const [name, setname] = useState('')
+
+  const loginss =()=>{
+signInWithEmailAndPassword(auth, loginemail, loginpassword)
+  .then(() => {
+    navigate('/dash')
+  })
+  .catch(() => {
+    Alert('SSS')
+  });
+  }
+
+  const singin =()=>{
+   
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        navigate('/dash')
+        db.collection('username').doc(result.user.uid).set({password:password,email:result.user.email,name:name,uid:result.user.uid,isOnline:true,timeStamp:new Date()})
+      })
+      .catch(() => {
+        
+      });
+      setname('')
+      setemail('')
+      setpassword('')
+      
+  }
+
+
+
   return (
   <>
   <Tabs>
@@ -20,9 +61,12 @@ const Login = () => {
   <h2 class="login-header">SIGN IN</h2>
 
   <form class="login-container">
-    <p><input type="email" placeholder="Email"/></p>
-    <p><input type="password" placeholder="Password"/></p>
-    <p ><input type="submit" value="Log in"/></p>
+    <p><input type="email" placeholder="Email" value={loginemail} onChange={(e)=>setloginemail(e.target.value)} /></p>
+
+    <p><input type="password" placeholder="Password" value={loginpassword} onChange={(e)=>setloginpassword(e.target.value)}/></p>
+   <div className='logindiv'>
+   <Link className='loginbtn' onClick={loginss}>SIGN IN</Link>
+   </div>
   </form>
 </div>
     </TabPanel>
@@ -46,7 +90,7 @@ const Login = () => {
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" class="form-control" />
+                      <input type="text" id="form3Example1c" class="form-control" value={name} onChange={(e)=>setname(e.target.value)}/>
                       <label class="form-label" for="form3Example1c">Your Name</label>
                     </div>
                   </div>
@@ -54,7 +98,7 @@ const Login = () => {
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="email" id="form3Example3c" class="form-control" />
+                      <input type="email" id="form3Example3c" class="form-control" value={email} onChange={(e)=>setemail(e.target.value)} />
                       <label class="form-label" for="form3Example3c">Your Email</label>
                     </div>
                   </div>
@@ -62,21 +106,13 @@ const Login = () => {
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4c" class="form-control" />
+                      <input type="password" id="form3Example4c" class="form-control" value={password} onChange={(e)=>setpassword(e.target.value)}/>
                       <label class="form-label" for="form3Example4c">Password</label>
                     </div>
                   </div>
 
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4cd" class="form-control" />
-                      <label class="form-label" for="form3Example4cd">Conform password</label>
-                    </div>
-                  </div>
-
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" class="btns btn-primary btn-lg">Sign Up</button>
+                    <button type="button" class="btns btn-primary btn-lg" onClick={singin}>Sign Up</button>
                   </div>
 
                 </form>

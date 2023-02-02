@@ -4,15 +4,20 @@ justify-content: center;
 }
 .teamimg{
     border-radius: 50%;
+    width: 230px;
 }
 .teamrow{
-   margin-top:25%;
+   margin-top:15%;
    justify-content: center;
    display: flex;
 }
 .ss{
     color: orange;
     margin-top: 15px;
+}
+.infoo{
+  color: white;
+  font-size: 12PX;
 }
 .teams {
     background: black;
