@@ -16,7 +16,8 @@ const About = () => {
     <div>
       {title1.map((e) => (
         <>
-          <div class="about row">
+        <div className='container'>
+        <div class="about row">
             <div className='col-lg-6'>
               <img className='imahe' src={e.image}/>
             </div>
@@ -31,6 +32,8 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+        
         </>
       ))}
     </div>

@@ -27,12 +27,12 @@ const ChandelierClean = () => {
      
         <div>
      <Tabs>
-              <TabList>
-                <Tab>Title 1</Tab>
-                <Tab>Title 2</Tab>
-                <Tab>Title 3</Tab>
-                <Tab>Title 4</Tab>
-              </TabList>
+     <TabList>
+               <Tab>Home</Tab>
+               <Tab>Category 1</Tab>
+               <Tab>Category 2</Tab>
+               <Tab>Category 3</Tab>
+             </TabList>
 
               <TabPanel>
                 <h2>chetan</h2>

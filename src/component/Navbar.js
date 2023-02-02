@@ -32,8 +32,8 @@ const Navbar = () => {
             <div>
               <div className="container">
                 <div className="row">
-                  <div className="col-md-12 text-center">
-                    <Link to='/'> <h3 className="animate-charcter">Cleannation</h3></Link>
+                  <div className=" col-md-12 text-center">
+                    <Link to='/'><img className='logoimages' src='https://res.cloudinary.com/dgvvfn1gf/image/upload/v1675317788/CLEANNATIONLOGO_2_f6hz9d.png'/></Link>
                   </div>
                 </div>
               </div>

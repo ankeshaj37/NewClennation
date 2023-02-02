@@ -29,6 +29,11 @@ import Dashboard from './dashboard/Dashboard';
 import Edit from './dashboard/Edit';
 import Leads from './dashboard/Leads';
 import TotaleServises from './dashboard/TotaleServises';
+import Cancellation from './FooterCompo.js/Cancellation';
+import FAQs from './FooterCompo.js/FAQs';
+import Payment from './FooterCompo.js/Payment';
+import Privecy from './FooterCompo.js/Privecy';
+import Terms from './FooterCompo.js/Terms';
 import About from './Menus/About';
 import Contactus from './Menus/Contactus';
 import Offer from './Menus/Offer';
@@ -70,9 +75,16 @@ const App = () => {
           <Route path="/add" element={<AddServices />} />
           <Route path="/totle" element={<TotaleServises />} />
           <Route path="/leads" element={<Leads />} />
-          <Route path="form" element={<Form />} />
-          <Route path="edit" element={<Edit />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="/edit" element={<Edit />} />
+          
           <Route path="/:id" element={<ShowData />} />
+
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/cancellation" element={<Cancellation />} />
+          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/privecy" element={<Privecy />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>  
       
       </BrowserRouter>

@@ -20,13 +20,12 @@ const Shifting = () => {
   return (
     <div>
     <Tabs>
-             <TabList>
-               <Tab>Title 1</Tab>
-               <Tab>Title 2</Tab>
-               <Tab>Title 3</Tab>
-               <Tab>Title 4</Tab>
+    <TabList>
+               <Tab>Home</Tab>
+               <Tab>Category 1</Tab>
+               <Tab>Category 2</Tab>
+               <Tab>Category 3</Tab>
              </TabList>
-
              <TabPanel>
              <div className='container'>
            {first.map((e)=>(
@@ -61,13 +60,13 @@ const Shifting = () => {
      </div>
              </TabPanel>
              <TabPanel>
-               <h2>heth</h2>
+               <h2>Coming Soon ..</h2>
              </TabPanel>
              <TabPanel>
-               <h2>rohit</h2>
+             <h2>Coming Soon ..</h2>
              </TabPanel>
              <TabPanel>
-               <h2>shubham</h2>
+             <h2>Coming Soon ..</h2>
              </TabPanel>
            </Tabs>
 

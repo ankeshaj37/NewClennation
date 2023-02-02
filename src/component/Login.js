@@ -22,9 +22,10 @@ const Login = () => {
 signInWithEmailAndPassword(auth, loginemail, loginpassword)
   .then(() => {
     navigate('/dash')
+    alert('Successful ')
   })
   .catch(() => {
-    Alert('SSS')
+    Alert('Some thing is Wrong')
   });
   }
 
@@ -33,10 +34,11 @@ signInWithEmailAndPassword(auth, loginemail, loginpassword)
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         navigate('/dash')
+        alert('Successful ')
         db.collection('username').doc(result.user.uid).set({password:password,email:result.user.email,name:name,uid:result.user.uid,isOnline:true,timeStamp:new Date()})
       })
       .catch(() => {
-        
+        Alert('Some thing is Wrong')
       });
       setname('')
       setemail('')

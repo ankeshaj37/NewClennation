@@ -70,5 +70,12 @@
     margin: 5px;
 
 }
+.logoimages{
+  width: 305px;
+}
 
-
+@media screen and (max-width: 480px) {
+  .logoimages{
+    width: 220px;
+  }
+}

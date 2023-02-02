@@ -1,16 +1,15 @@
+
 import React ,{useState,useEffect} from 'react'
 import { db } from '../component/firebase'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { Link ,useNavigate} from 'react-router-dom';
-
 const Wedding = () => {
-  
  
   const [first, setfirst] = useState([])
   const navigate = useNavigate()
   useEffect(() => {
-  db.collection('cetegory').doc('MA8P3Re6z9Qy4V1silHS').collection('Wedding').onSnapshot(tap=>(
+  db.collection('cetegory').doc('MA8P3Re6z9Qy4V1silHS').collection('Sport Traner').onSnapshot(tap=>(
       setfirst(tap.docs.map((e)=>(e.data())))
     ))
   }, [])
@@ -19,32 +18,18 @@ const Wedding = () => {
     navigate('/form')
   }
 
-  console.log(first);
+
   return (
     <div>
     <Tabs>
-             <TabList>
-               <Tab>Title 1</Tab>
-               <Tab>Title 2</Tab>
-               <Tab>Title 3</Tab>
-               <Tab>Title 4</Tab>
+    <TabList>
+               <Tab>Home</Tab>
+               <Tab>Category 1</Tab>
+               <Tab>Category 2</Tab>
+               <Tab>Category 3</Tab>
              </TabList>
-
              <TabPanel>
-               <h2>chetan</h2>
-             </TabPanel>
-             <TabPanel>
-               <h2>heth</h2>
-             </TabPanel>
-             <TabPanel>
-               <h2>rohit</h2>
-             </TabPanel>
-             <TabPanel>
-               <h2>shubham</h2>
-             </TabPanel>
-           </Tabs>
-
-           <div className='container'>
+             <div className='container'>
            {first.map((e)=>(
        <>
 <div className=' eee row'>
@@ -70,11 +55,25 @@ const Wedding = () => {
   <button className='buttdiv' onClick={book}>Book Now</button>
 </div>
   </div>
+
 </div>
 </>
      ))}
      </div>
+             </TabPanel>
+             <TabPanel>
+               <h2>Coming Soon ..</h2>
+             </TabPanel>
+             <TabPanel>
+             <h2>Coming Soon ..</h2>
+             </TabPanel>
+             <TabPanel>
+             <h2>Coming Soon ..</h2>
+             </TabPanel>
+           </Tabs>
+
+       
    </div>
   )}
-  
+
 export default Wedding
