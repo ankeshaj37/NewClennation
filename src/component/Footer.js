@@ -26,7 +26,7 @@ const Footer = () => {
       </div>
      </div>
     </div>
-      <p className='footerr'>@2020 CLEANNATION.IN</p>
+      <p className='footerr'>@2020 CLEANNATION.IN ( WITH LOW COST) .</p>
     </>
   )
 }

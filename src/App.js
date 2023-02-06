@@ -38,7 +38,7 @@ import About from './Menus/About';
 import Contactus from './Menus/Contactus';
 import Offer from './Menus/Offer';
 import Team from './Menus/Team'
-import Whatsapp from './Menus/Whatsapp';
+
 
 
 
@@ -48,7 +48,7 @@ const App = () => {
     <div className='app'>
       <BrowserRouter>
         <Navbar/>
-<Whatsapp/>
+
         <Routes>          
           <Route path="/" element={<Home />} />
           <Route path="/Category" element={<CategoryHome />} />

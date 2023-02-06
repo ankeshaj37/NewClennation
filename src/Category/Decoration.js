@@ -2,7 +2,7 @@ import React ,{useState,useEffect} from 'react'
 import { db } from '../component/firebase'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { Link ,useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 const Decoration = () => {
  
@@ -16,16 +16,14 @@ const Decoration = () => {
   const book =()=>{
     navigate('/form')
   }
-
   console.log(first);
   return (
     <div>
     <Tabs>
     <TabList>
-               <Tab>Home</Tab>
-               <Tab>Category 1</Tab>
-               <Tab>Category 2</Tab>
-               <Tab>Category 3</Tab>
+               <Tab>Decoretion</Tab>
+               <Tab>Reference Product</Tab>
+               <Tab>Social Media</Tab>
              </TabList>
 
              <TabPanel>
@@ -51,8 +49,8 @@ const Decoration = () => {
 
 <div className='locdiv'><div className='shsh'><img className='loca' src='https://img.icons8.com/ios-filled/512/place-marker.png'/></div><h6>{e.address}</h6></div>
 <div className='buttdiv'>
-<button className="buttdiv"><a className="buttdiv" href={"tel:" + e.mobile}>Call Now</a></button>
-  <button className='buttdiv' onClick={book}>Book Now</button>
+<button className="buttdiv"><a className="buttdiv" href={"tel:" + e.mobile}>Call</a></button>
+  <button className='buttdiv' onClick={book}>Enquiry</button>
 </div>
   </div>
 
@@ -67,9 +65,7 @@ const Decoration = () => {
              <TabPanel>
              <h2>Coming Soon ..</h2>
              </TabPanel>
-             <TabPanel>
-             <h2>Coming Soon ..</h2>
-             </TabPanel>
+             
            </Tabs>
 
   

@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { db } from '../component/firebase'
+import KeyEnter from '../component/KeyEnter'
 import './Contactus.css'
 
 const Contactus = () => {
@@ -23,7 +24,8 @@ const Contactus = () => {
         setnumb('')
         setremark('')
     }
-    
+    KeyEnter(postt,'Enter')
+
     return (
         <>
         {first.map((e)=>(

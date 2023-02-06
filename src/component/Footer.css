@@ -24,12 +24,11 @@
 .ssdd{
     display: flex;
     justify-content: center;
-  
 }
 @media screen and (max-width: 992px) {
     .ssd{
         display: flex;
-        justify-content: center;
+        justify-content: left;
     }
     .ssdd{
         display: flex;
