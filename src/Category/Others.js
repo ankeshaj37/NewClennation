@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { db } from '../component/firebase'
 import 'react-tabs/style/react-tabs.css';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
 const Others = () => {
 
   const [first, setfirst] = useState([])
@@ -18,6 +20,12 @@ const Others = () => {
   console.log(first);
   return (
     <div>
+      <Helmet>
+        <title>Low Cost Services Near Me | Cleannation</title>
+        <meta name="description" content=" We offer everything, from cleaning and maintenance to event organizing and fitness instruction. Our services are reasonable, dependable, and delivered by qualified experts. To find out more about our offerings and how we can help you save time and money, get in touch with us right now." />
+        <meta name="keywords" content="Services that are low cost, affordable, and local include cleaning, maintenance, event planning, fitness instruction, office cleaning, car cleaning, chandelier cleaning, dance instruction, decoration, website design, SEO, and social media marketing." />
+        
+      </Helmet>
 
       <div className='container'>
         {first.map((e) => (
@@ -36,12 +44,13 @@ const Others = () => {
                   <h6>{e.infor}</h6>
                 </details></div>
                 <br />
-                <div><h5>{e.Price}</h5></div>
+                <div><h5>₹ {e.Price}</h5></div>
                 <br />
 
-                <div className='locdiv'><div className='shsh'><img className='loca' src='https://img.icons8.com/ios-filled/512/place-marker.png' /></div><h6>{e.address}</h6></div>
-                <div className='buttdiv'>
-                  <button className="buttdiv"><a className="buttdiv" href={"tel:" + e.mobile}>Call</a></button>
+                
+                <a href={e.address} target="_blank" className='linku'><div className='locdiv'><div className='shsh'><img className='loca'
+                   src='https://img.icons8.com/ios-filled/512/place-marker.png' /></div></div></a><div className='buttdiv'>
+                  <button className="buttdiv"><a className="buttdiv" href={"tel:7021595850"}>Call</a></button>
                   <button className='buttdiv' onClick={book}>Enquiry</button>
                 </div>
               </div>

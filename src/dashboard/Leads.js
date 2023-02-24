@@ -1,48 +1,60 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { db } from '../component/firebase'
 
 const Leads = () => {
+
+  const [first, setfirst] = useState([])
+
+  useEffect(() => {
+    db.collection('order').onSnapshot(tap => (
+      setfirst(tap.docs.map((e) => (e.data())))
+    ))
+  }, [])
+
+  console.log(first);
+
+
   return (
+    <>
+{first.map((e,i)=>(
   <>
-  <div className='container'>
-    <div className='row'>
-    <table class="table-responsive table-bordered border-primary">
-  <thead>
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col">Name</th>
-      <th scope="col">Number</th>
-      <th scope="col">Service</th>
-      <th scope="col">Address</th>
-    </tr>
-    
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>kikl</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-    </tr>
-    
-  </tbody>
-</table>
-    </div>
-  </div>
+      <div className='formdiv'>
+        
+        <form class=" formmm row g-3">
+        <h4>Order{i+1}</h4>
+          <div class="col-md-12">
+            <label for="inputEmail4" class="form-label">Name</label>
+            <div className='ff'>{e.name}</div>
+          </div>
+          <div class="col-md-12">
+            <label for="inputPassword4" class="form-label">Phone No</label>
+            <div className='ff'>{e.number}</div>
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <div className='ff'>{e.address}</div>
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Remark </label>
+            <div className='ff'>{e.remark}</div>
+          </div>
+          <div class="col-md-12">
+            <label for="inputCity" class="form-label">City</label>
+            <div className='ff'>{e.city}</div>
+          </div>
+          <div class="col-md-12">
+          <label for="inputCity" class="form-label">Services</label>
+            <div className='ff'>{e.services}</div>
+          </div>
+          <p></p>
+          <div class="col-12">
+            
+          </div>
+        </form>
+      </div>
   </>
+))}
+    </>
   )
 }
 

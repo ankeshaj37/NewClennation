@@ -75,7 +75,7 @@ const Team = () => {
                             <h6 >{e.name4}</h6>
                             </div>
                            <div  >
-                           <p className='infoo'>{e.deta}</p>
+                           <p className='infoo'>{e.deta4}</p>
                            </div>
                             </div>
                         </div>

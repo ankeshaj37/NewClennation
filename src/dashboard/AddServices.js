@@ -36,8 +36,8 @@ const AddServices = () => {
 
     return (
         <>
-            <div className='container'>
-                <div className='row'>
+            <div className='container addti'>
+                <div className='row '>
                     <h2 className='addti'>Add Services</h2>
                     <div className="forms">
 

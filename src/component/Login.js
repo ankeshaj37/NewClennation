@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword,GoogleAuthProvider ,signInWithPopup  } from "firebase/auth";
 import { auth, db } from './firebase';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+
 
 
   const navigate = useNavigate()
@@ -34,6 +35,8 @@ const Login = () => {
     setloginpassword('')
 
   }
+
+
   KeyEnter(loginss, 'Enter')
 
   const singin = () => {
@@ -53,31 +56,18 @@ const Login = () => {
     setemail('')
     setpassword('')
   }
+
   KeyEnter(singin, 'Enter')
 
   return (
     <>
       <Tabs>
         <TabList className='tabss'>
+        <Tab>SIGN UP</Tab>
           <Tab>SIGN IN</Tab>
-          <Tab>SIGN UP</Tab>
         </TabList>
 
         <TabPanel>
-          <div class="login">
-            <form class="login-container">
-              <h2 class="login-header">SIGN IN</h2>
-              <p><input type="email" placeholder="Email" value={loginemail} onChange={(e) => setloginemail(e.target.value)} /></p>
-              <p><input type="password" placeholder="Password" value={loginpassword} onChange={(e) => setloginpassword(e.target.value)} /></p>
-              <div className='logindiv'>
-                <Link className='loginbtn' onClick={loginss}>SIGN IN</Link>
-              </div>
-            </form>
-          </div>
-        </TabPanel>
-
-        <TabPanel>
-
           <div class="container">
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col-lg-12 col-xl-11">
@@ -91,7 +81,6 @@ const Login = () => {
                         </div>
 
                         <form class="mx-1 mx-md-4">
-
                           <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
@@ -119,7 +108,7 @@ const Login = () => {
                           <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                             <button type="button" class="btns btn-primary btn-lg" onClick={singin}>Sign Up</button>
                           </div>
-
+                         
                         </form>
 
                       </div>
@@ -135,6 +124,22 @@ const Login = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+
+
+
+          <div class="login">
+            <form class="login-container">
+              <h2 class="login-header">SIGN IN</h2>
+              <p><input type="email" placeholder="Email" value={loginemail} onChange={(e) => setloginemail(e.target.value)} /></p>
+              <p><input type="password" placeholder="Password" value={loginpassword} onChange={(e) => setloginpassword(e.target.value)} /></p>
+              <div className='logindiv'>
+                <Link className='loginbtn' onClick={loginss}>SIGN IN</Link>
+              </div>
+            </form>
           </div>
 
         </TabPanel>

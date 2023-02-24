@@ -3,6 +3,9 @@ import { db } from '../component/firebase'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+
 const HouseCleaning = () => {
 
   const [first, setfirst] = useState([])
@@ -19,6 +22,12 @@ const HouseCleaning = () => {
   console.log(first);
   return (
     <div>
+     <Helmet>
+        <title>Low-Cost Office Staff Contractor Near Me | Cleannation</title>
+        <meta name="description" content="Housekeeping contracts, office boy contracts, and other office staff contractor services are all provided by your company at reasonable prices. Make an appointment with our team of knowledgeable and dependable professionals by getting in touch with us right away." />
+        <meta name="keywords" content="Office staff contractor, housekeeping contract, office boy contract, low cost, low cost, nearby, qualified, experienced, and dependable" />
+       
+      </Helmet>
       <Tabs>
         <TabList>
           <Tab>All Contract </Tab>
@@ -43,12 +52,13 @@ const HouseCleaning = () => {
                       <h6>{e.infor}</h6>
                     </details></div>
                     <br />
-                    <div><h5>{e.Price}</h5></div>
+                    <div><h5>₹ {e.Price}</h5></div>
                     <br />
 
-                    <div className='locdiv'><div className='shsh'><img className='loca' src='https://img.icons8.com/ios-filled/512/place-marker.png' /></div><h6>{e.address}</h6></div>
-                    <div className='buttdiv'>
-                      <button className="buttdiv"><a className="buttdiv" href={"tel:" + e.mobile}>Call</a></button>
+
+                    <a href={e.address} target="_blank" className='linku'><div className='locdiv'><div className='shsh'><img className='loca'
+                      src='https://img.icons8.com/ios-filled/512/place-marker.png' /></div></div></a><div className='buttdiv'>
+                      <button className="buttdiv"><a className="buttdiv" href={"tel:7021595850"}>Call</a></button>
                       <button className='buttdiv' onClick={book}>Enquiry</button>
                     </div>
                   </div>
@@ -64,7 +74,7 @@ const HouseCleaning = () => {
         <TabPanel>
           <h2>Coming Soon ..</h2>
         </TabPanel>
-       
+
       </Tabs>
 
 

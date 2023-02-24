@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-
 import { db } from '../component/firebase'
 import 'react-tabs/style/react-tabs.css';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Dance = () => {
 
@@ -11,7 +11,7 @@ const Dance = () => {
   const [first, setfirst] = useState([])
 
   useEffect(() => {
-    db.collection('cetegory').doc('MA8P3Re6z9Qy4V1silHS').collection('Home Cleaning').onSnapshot(tap => (
+    db.collection('cetegory').doc('MA8P3Re6z9Qy4V1silHS').collection('Dance Music').onSnapshot(tap => (
       setfirst(tap.docs.map((e) => (e.data())))
     ))
   }, [])
@@ -25,7 +25,13 @@ const Dance = () => {
   return (
 
     <div>
-      
+      <Helmet>
+        <title>Low-Cost Dance Training Teacher Near Me | Cleannation</title>
+        <meta name="description" content="Are you trying to find a local dancing instructor who charges little? Make an appointment for your first lesson with us right now to begin developing your dance abilities." />
+        <meta name="keywords" content="affordable dance classes, dance lessons, local dance teachers, dance instructors, economical dance training, 
+        dance classes for adults, and dance classes for children,dance teacher course online,becoming a dance teacher" />
+      </Helmet>
+
       <div className='container'>
         {first.map((e) => (
           <>
@@ -42,11 +48,12 @@ const Dance = () => {
                   <h6>{e.infor}</h6>
                 </details></div>
                 <br />
-                <div><h5>{e.Price}</h5></div>
+                <div><h5>₹ {e.Price}</h5></div>
                 <br />
-                <div className='locdiv'><div className='shsh'><img className='loca' src='https://img.icons8.com/ios-filled/512/place-marker.png' /></div><h6>{e.address}</h6></div>
-                <div className='buttdiv'>
-                  <button className="buttdiv"><a className="buttdiv" href={"tel:" + e.mobile}>Call</a></button>
+
+                <a href={e.address} target="_blank" className='linku'><div className='locdiv'><div className='shsh'><img className='loca'
+                  src='https://img.icons8.com/ios-filled/512/place-marker.png' /></div></div></a><div className='buttdiv'>
+                  <button className="buttdiv"><a className="buttdiv" href={"tel:7021595850"}>Call</a></button>
                   <button className='buttdiv' onClick={book}>Enquiry</button>
                 </div>
               </div>

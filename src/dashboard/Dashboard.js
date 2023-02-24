@@ -23,7 +23,7 @@ const Dashboard = () => {
                         </Link>
                     </div>
                     <div className="col-md-4 mt-3 text-center">
-                        <Link className='minlin' to='/totle'>
+                        <Link className='minlin' to='/totler'>
                             <div className="bg-white p-3 rounded border">
                                 <h6>Totale Services</h6>
                                 <img src="https://img.icons8.com/glyph-neue/512/check-all.png" width="50"></img>
@@ -49,8 +49,8 @@ const Dashboard = () => {
                     <div className="col-md-4 mt-3 text-center">
                         <Link className='minlin'>
                             <div className="bg-white p-3 rounded border">
-                                <h6>Language</h6>
-                                <img src="https://img.icons8.com/ios-filled/512/language.png" width="50"></img>
+                                <h6>Create Business Profile</h6>
+                                <img src="https://img.icons8.com/ios-filled/256/contract-job.png" width="50"></img>
                             </div>
                         </Link>
                     </div>

@@ -16,15 +16,16 @@ const CategoryHome = () => {
   {id:5,kk:'https://img.icons8.com/external-flaticons-flat-flat-icons/512/external-job-recruitment-agency-flaticons-flat-flat-icons.png',title:'Job Agency' },
   {id:6,kk:'https://img.icons8.com/fluency/512/real-estate.png',title:'Real Estate' },
   {id:7,kk:'https://img.icons8.com/fluency/512/swing.png',title:'Dance Music' },
-  {id:8,kk:'https://img.icons8.com/color/512/weightlift.png',title:'Fitness Traner' },
-  {id:9,kk:'https://img.icons8.com/color/512/sports.png',title:'Sport Traner' },
-  {id:10,kk:'https://img.icons8.com/external-flatart-icons-flat-flatarticons/512/external-decoration-usa-flatart-icons-flat-flatarticons-2.png',title:'Decoration' },
-  {id:11,kk:'https://img.icons8.com/external-justicon-lineal-color-justicon/512/external-wedding-romantic-love-justicon-lineal-color-justicon.png',title:'Wedding' },
-  {id:12,kk:'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/external-event-planning-award-events-flaticons-lineal-color-flat-icons.png',title:'Events' },
 
-  {id:13,kk:'https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/512/external-digital-marketing-digital-marketing-flatart-icons-lineal-color-flatarticons.png' 
+  {id:8,kk:'https://img.icons8.com/color/512/sports.png',title:'Sport Traner' },
+  {id:9,kk:'https://img.icons8.com/external-flatart-icons-flat-flatarticons/512/external-decoration-usa-flatart-icons-flat-flatarticons-2.png',title:'Decoration' },
+  
+  
+  {id:10,kk:'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/external-event-planning-award-events-flaticons-lineal-color-flat-icons.png',title:'Events' },
+
+  {id:11,kk:'https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/512/external-digital-marketing-digital-marketing-flatart-icons-lineal-color-flatarticons.png' 
   ,title:'Digital Support' },
-  {id:14,kk:'https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/512/external-more-interface-kiranshastry-gradient-kiranshastry.png',title:'Others' }
+  {id:12,kk:'https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/512/external-more-interface-kiranshastry-gradient-kiranshastry.png',title:'Others' }
 ]
 
   return (

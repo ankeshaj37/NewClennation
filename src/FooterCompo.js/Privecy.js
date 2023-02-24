@@ -50,7 +50,6 @@ Since we don't have any credit card data on file, we don't have access to it. If
 You can change your account information and preferences—including whether you want us to contact you—at any time. about brand-new 
 services. Additionally, we shall make reasonable efforts to confirm your identification in order to safeguard your privacy and 
 security.prior to allowing access or making changes.
-
 <br></br>
 <br></br>
 
