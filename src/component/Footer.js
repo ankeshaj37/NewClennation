@@ -20,6 +20,7 @@ const Footer = () => {
   <li><a  href='https://www.instagram.com/cleannationin/'>Instagram</a> </li>
   <li><a  href='https://www.youtube.com/channel/UCu4dWliy_QEYzh5O6Jw6EWyQ' >Youtube</a> </li>
   <li><a  href='/faqs'>FAQs</a> </li>
+  <li><a  href='/backlink'>Related-Websites</a></li>
 
 </ul>
 </div>

@@ -38,6 +38,7 @@ import Offer from './Menus/Offer';
 import Team from './Menus/Team'
 import { HelmetProvider } from 'react-helmet-async';
 import Payment from './component/Payment';
+import Backlink from './component/Backlink';
 
 
 
@@ -83,6 +84,7 @@ const App = () => {
             <Route path="/privecy" element={<Privecy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/pay" element={<Payment />} />
+            <Route path="/backlink" element={<Backlink />} />
           </Routes>
         </HelmetProvider>
       </BrowserRouter>

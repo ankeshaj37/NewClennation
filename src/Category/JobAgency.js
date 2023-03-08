@@ -11,7 +11,7 @@ const HouseCleaning = () => {
   const [first, setfirst] = useState([])
   const navigate = useNavigate()
   useEffect(() => {
-    db.collection('cetegory').doc('MA8P3Re6z9Qy4V1silHS').collection('Ofice Boy Agency').onSnapshot(tap => (
+    db.collection('cetegory').doc('MA8P3Re6z9Qy4V1silHS').collection('Contract Agency').onSnapshot(tap => (
       setfirst(tap.docs.map((e) => (e.data())))
     ))
   }, [])
