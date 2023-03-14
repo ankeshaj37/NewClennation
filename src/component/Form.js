@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { db } from './firebase'
+import { db } from './Firebase'
 import './Form.css'
 import KeyEnter from './KeyEnter'
 import { ToastContainer, toast } from 'react-toastify';

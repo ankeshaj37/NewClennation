@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { db } from '../component/firebase'
+import { db } from '../component/Firebase'
 import KeyEnter from '../component/KeyEnter'
 import './AddServices.css'
 import { ToastContainer, toast } from 'react-toastify';

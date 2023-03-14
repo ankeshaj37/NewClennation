@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { db } from '../component/firebase'
+import { db } from '../component/Firebase'
 import './Team.css'
 const Team = () => {
 
@@ -20,7 +20,7 @@ const Team = () => {
                     <div class="teams col-lg-3">
                         <div className=''>
                             <div className=' teambox'>
-                                <img className='teamimg' src={e.image1} />
+                                <img className='teamimg' src={e.image1} alt="authers"/>
                             </div>
                             <div class="ss text-center">
                             <div >
@@ -36,7 +36,7 @@ const Team = () => {
                     <div class="teams col-lg-3">
                         <div >
                             <div className=' teambox'>
-                                <img className='teamimg' src={e.image2} />
+                                <img className='teamimg' src={e.image2}  alt="authers"/>
                             </div>
                             <div class="ss text-center">
                             <div >
@@ -52,7 +52,7 @@ const Team = () => {
                     <div class="teams  col-lg-3">
                         <div>
                             <div className=' teambox'>
-                                <img className='teamimg'src={e.image3} />
+                                <img className='teamimg'src={e.image3} alt="authers" />
                             </div>
                             <div class="ss text-center">
                             <div >
@@ -68,7 +68,7 @@ const Team = () => {
                     <div class="teams col-lg-3">
                         <div >
                             <div className=' teambox'>
-                                <img className='teamimg' src={e.image4}/>
+                                <img className='teamimg' src={e.image4} alt="authers"/>
                             </div>
                             <div class="ss text-center">
                             <div >

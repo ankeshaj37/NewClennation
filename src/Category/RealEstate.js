@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { db } from '../component/firebase'
+import { db } from '../component/Firebase'
 import 'react-tabs/style/react-tabs.css';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';

@@ -6,16 +6,16 @@ import './App.css';
 import CarCleaning from './Category/CarCleaning';
 import CategoryHome from './Category/CategoryHome';
 import ChandelierClean from './Category/ChandelierClean';
-import Dance from './Category/Dance';
+
 import Decoration from './Category/Decoration';
 import Digital from './Category/Digital';
-import Events from './Category/Events';
+
 import HouseCleaning from './Category/HouseCleaning';
 import JobAgency from './Category/JobAgency';
 import Others from './Category/Others';
 import RealEstate from './Category/RealEstate';
 import Shifting from './Category/Shifting';
-import Sports from './Category/Sports';
+
 import Footer from './component/Footer';
 import Form from './component/Form';
 import Home from './component/Home'
@@ -54,18 +54,19 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Category" element={<CategoryHome />} />
-            <Route path="/services/1" element={<HouseCleaning />} />
-            <Route path="/services/2" element={<CarCleaning />} />
-            <Route path="/services/3" element={<ChandelierClean />} />
-            <Route path="/services/4" element={<Shifting />} />
-            <Route path="/services/5" element={<JobAgency />} />
-            <Route path="/services/6" element={<RealEstate />} />
-            <Route path="/services/7" element={<Dance />} />
-            <Route path="/services/8" element={<Sports />} />
-            <Route path="/services/9" element={<Decoration />} />
-            <Route path="/services/10" element={<Events />} />
-            <Route path="/services/11" element={<Digital />} />
-            <Route path="/services/12" element={<Others />} />
+
+
+            <Route path="/home-cleaning-services" element={<HouseCleaning />} />
+            <Route path="/car-cleaning-services" element={<CarCleaning />} />
+            <Route path="/chandelier-cleaning-services" element={<ChandelierClean />} />
+            <Route path="/best-shifting-services" element={<Shifting />} />
+            <Route path="/job-contract-services" element={<JobAgency />} />
+            <Route path="/real-estate-agent-services" element={<RealEstate />} />
+            
+            <Route path="/decoration-events-services" element={<Decoration />} />
+           
+            <Route path="/digital-support-services" element={<Digital />} />
+            <Route path="/all-types-services" element={<Others />} />
             <Route path="/team" element={<Team />} />
             <Route path="/about" element={<About />} />
             <Route path="/contactus" element={<Contactus />} />

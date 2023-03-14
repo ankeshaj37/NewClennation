@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword,GoogleAuthProvider ,signInWithPopup  } from "firebase/auth";
-import { auth, db } from './firebase';
+import { auth, db } from './Firebase';
 import { Link, useNavigate } from 'react-router-dom';
 
 import KeyEnter from './KeyEnter';

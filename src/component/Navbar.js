@@ -1,7 +1,7 @@
 import { onAuthStateChanged,signOut } from 'firebase/auth';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { auth } from './firebase';
+import { auth } from './Firebase';
 import './Navbar.css';
 
 
@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-12 text-center">
-                  <Link to='/'><img className='logoimages' src='https://res.cloudinary.com/dgvvfn1gf/image/upload/v1675317788/CLEANNATIONLOGO_2_f6hz9d.png' /></Link>
+                  <Link to='/'><img className='logoimages' src='https://res.cloudinary.com/dgvvfn1gf/image/upload/v1675317788/CLEANNATIONLOGO_2_f6hz9d.png' alt="logo" /></Link>
                 </div>
               </div>
             </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
 
         <div className=" sudiv col-6">
-         <Link to='/pay'><img className='avtar' src='https://res.cloudinary.com/dgvvfn1gf/image/upload/v1676773020/New_Project_1_rfb8fn.png' /></Link>
+         <Link to='/pay'><img className='avtar' src='https://res.cloudinary.com/dgvvfn1gf/image/upload/v1676773020/New_Project_1_rfb8fn.png'alt="avtar" /></Link>
       
 
           <div className="btn warning tog navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">

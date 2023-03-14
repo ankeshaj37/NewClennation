@@ -18,7 +18,7 @@ const Dashboard = () => {
                         <Link className='minlin' to='/add'>
                             <div className="bg-white p-3 rounded border">
                                 <h6>Post Service</h6>
-                                <img src="https://img.icons8.com/ios-glyphs/512/plus-2-math.png" width="50"></img>
+                                <img src="https://img.icons8.com/ios-glyphs/512/plus-2-math.png" width="50" alt="icons"></img>
                             </div>
                         </Link>
                     </div>
@@ -26,7 +26,7 @@ const Dashboard = () => {
                         <Link className='minlin' to='/totler'>
                             <div className="bg-white p-3 rounded border">
                                 <h6>Totale Services</h6>
-                                <img src="https://img.icons8.com/glyph-neue/512/check-all.png" width="50"></img>
+                                <img src="https://img.icons8.com/glyph-neue/512/check-all.png" width="50" alt="icons"></img>
                             </div>
                         </Link>
                     </div>
@@ -34,7 +34,7 @@ const Dashboard = () => {
                         <Link  to='/leads' className='minlin'>
                             <div className="bg-white p-3 rounded border">
                                 <h6>Order Leads</h6>
-                                <img src="https://img.icons8.com/glyph-neue/512/order-history.png" width="50"></img>
+                                <img src="https://img.icons8.com/glyph-neue/512/order-history.png" width="50" alt="icons"></img>
                             </div>
                         </Link>
                     </div>
@@ -42,7 +42,7 @@ const Dashboard = () => {
                         <Link className='minlin'>
                             <div className="bg-white p-3 rounded border">
                                 <h6>Help</h6>
-                                <img src="https://img.icons8.com/ios-filled/512/help.png" width="50"></img>
+                                <img src="https://img.icons8.com/ios-filled/512/help.png" width="50" alt="icons"></img>
                             </div>
                         </Link>
                     </div>
@@ -50,7 +50,7 @@ const Dashboard = () => {
                         <Link className='minlin'>
                             <div className="bg-white p-3 rounded border">
                                 <h6>Create Business Profile</h6>
-                                <img src="https://img.icons8.com/ios-filled/256/contract-job.png" width="50"></img>
+                                <img src="https://img.icons8.com/ios-filled/256/contract-job.png" alt="icons" width="50" ></img>
                             </div>
                         </Link>
                     </div>
@@ -58,7 +58,7 @@ const Dashboard = () => {
                         <Link className='minlin'>
                             <div className="bg-white p-3 rounded border">
                                 <h6>Change Location</h6>
-                                <img src="https://img.icons8.com/ios-filled/512/place-marker.png" width="50"></img>
+                                <img src="https://img.icons8.com/ios-filled/512/place-marker.png" width="50" alt="icons"></img>
                             </div>
                         </Link>
                     </div>             

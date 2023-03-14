@@ -1,5 +1,5 @@
 import React ,{useState,useEffect} from 'react'
-import { db } from '../component/firebase'
+import { db } from '../component/Firebase'
 import './Offer.css'
 const Offer = () => {
 

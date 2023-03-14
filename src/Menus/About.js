@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { db } from '../component/firebase'
+import { db } from '../component/Firebase'
 import './About.css'
 
 const About = () => {
@@ -19,7 +19,7 @@ const About = () => {
         <div className='container'>
         <div class="about row">
             <div className='col-lg-6'>
-              <img className='imahe' src={e.image}/>
+              <img className='imahe' src={e.image} alt="logo"/>
             </div>
             <div className='col-lg-6'>
               <h1 className='h2us'>{e.name}</h1>

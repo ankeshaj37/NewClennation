@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { db } from '../component/firebase'
+import { db } from '../component/Firebase'
 import 'react-tabs/style/react-tabs.css';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -33,7 +33,7 @@ const Others = () => {
             <div className=' eee row'>
               <div className='ass col-lg-6'>
                 <div className='imgedivvv'>
-                  <img className='imagesss' src={e.image}></img>
+                  <img className='imagesss' src={e.image} alt="others"></img>
                 </div>
 
               </div>
@@ -49,7 +49,7 @@ const Others = () => {
 
                 
                 <a href={e.address} target="_blank" className='linku'><div className='locdiv'><div className='shsh'><img className='loca'
-                   src='https://img.icons8.com/ios-filled/512/place-marker.png' /></div></div></a><div className='buttdiv'>
+                   src='https://img.icons8.com/ios-filled/512/place-marker.png'alt="icons" /></div></div></a><div className='buttdiv'>
                   <button className="buttdiv"><a className="buttdiv" href={"tel:7021595850"}>Call</a></button>
                   <button className='buttdiv' onClick={book}>Enquiry</button>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { db } from '../component/firebase'
+import { db } from './Firebase'
 
 const Backlink = () => {
 
